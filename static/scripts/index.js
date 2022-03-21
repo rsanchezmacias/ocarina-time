@@ -96,6 +96,7 @@ let isSongMenuDisplayed = false;
         clearInterval(latestTimerId);
         removeAllClassStateFromBars();
 
+        let muteButton = document.querySelector(".mute-unmute-button");
         let leftBar = document.querySelector(".bar__left-filling");
         let rightBar = document.querySelector(".bar__right-filling");
 
@@ -103,6 +104,8 @@ let isSongMenuDisplayed = false;
         rightBar.classList.add("bar-song-completed");
         leftBar.style.width = "100%";
         rightBar.style.width = "100%";
+        muteButton.disabled = true;
+        muteButton.classList.add("disabled-mute");
 
         let songDuration = songTracker.songDuration;
         let delaySoundEffectTime = 1 * 1000;
@@ -130,6 +133,8 @@ let isSongMenuDisplayed = false;
             leftBar.style.width = "0%";
             rightBar.style.width = "0%";
             disableAllKeys(false);
+            muteButton.disabled = false;
+            muteButton.classList.remove("disabled-mute");
         }
     }
 

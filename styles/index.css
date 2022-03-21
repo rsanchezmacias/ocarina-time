@@ -78,6 +78,9 @@ body {
     background-size: contain;
 }
 
+.disabled-mute {
+    opacity: 65%;
+}
 
 /* MAIN */
 
