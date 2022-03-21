@@ -11,20 +11,19 @@ let isSongMenuDisplayed = false;
         keys[index].addEventListener("click", keyButtonClicked)
     }
 
+    document.addEventListener("keydown", function (event) {
+        let key = event.key;
+        let completeKey = "key__" + key.toLocaleLowerCase();
+        playKeySound(completeKey);
+    });
+
     function keyButtonClicked() {
         // let currentKey = event.currentTarget;
 
         let currentKey = this;
         let keyName = currentKey.classList[1];
         playKeySound(keyName);
-
     }
-
-    document.addEventListener("keydown", function (event) {
-        let key = event.key;
-        let completeKey = "key__" + key.toLocaleLowerCase();
-        playKeySound(completeKey);
-    });
 
     function playKeySound(key) {
         if (isAudioEnabled && !areKeysDisabled && !isSongMenuDisplayed) {
