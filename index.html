@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="static/images/favicon.ico" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Monoton&family=Permanent+Marker&family=Press+Start+2P&family=Roboto:wght@400;500;700;900&family=Sacramento&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/index.css" />
+    <title>It's dangerous to go...</title>
+</head>
+
+<body>
+    <div class="flex-container">
+        <header class="header">
+            <section class="header__content">
+                <h1 class="header__title">Ocarina of Time</h1>
+                <p class="header__actions">
+                    <button class="header__action mute-unmute-button mute"></button>
+                    <button class="header__action song-guide-button"></button>
+                </p>
+            </section>
+        </header>
+        <main class="main">
+            <article class="main__background-dimmer is-hidden"></article>
+            <section class="main__content">
+                <article class="popup is-hidden">
+                    <section class="popup__content">
+                        <h1 class="popup__title">Available Songs</h1>
+                        <hr class="popup__body-separator"/>
+                        <p class="popup__description">
+                            Play along any of the songs below to hear an extended version! The keys can 
+                            either by typed or clicked on the screen.
+                        </p>
+                        <table class="table">
+                            <thead class="table__header">
+                                <tr class="table__header-row">
+                                    <th class="table__header-item table__header-songname">Song Name</th>
+                                    <th class="table__header-item table__header-keys">Keys</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table__body">
+                                <tr class="table__body-row table__body-odd">
+                                    <td class="table__body-item table__body-songname">Song of time</td>
+                                    <td class="table__body-item table__body-keys">ADGADG</td>
+                                </tr>
+                                <tr class="table__body-row table__body-even">
+                                    <td class="table__body-item table__body-songname">Saria's Song</td>
+                                    <td class="table__body-item table__body-keys">GASGAS</td>
+                                </tr>
+                                <tr class="table__body-row table__body-odd">
+                                    <td class="table__body-item table__body-songname">Prelude of Light</td>
+                                    <td class="table__body-item table__body-keys">FAFASF</td>
+                                </tr>
+                                <tr class="table__body-row table__body-even">
+                                    <td class="table__body-item table__body-songname">Requiem of Spirit</td>
+                                    <td class="table__body-item table__body-keys">DGDAGD</td>
+                                </tr>
+                                <tr class="table__body-row table__body-odd">
+                                    <td class="table__body-item table__body-songname">Song of Storms</td>
+                                    <td class="table__body-item table__body-keys">DGFDGF</td>
+                                </tr>
+                                <tr class="table__body-row table__body-even">
+                                    <td class="table__body-item table__body-songname">Sun's Song</td>
+                                    <td class="table__body-item table__body-keys">AGFAGF</td>
+                                </tr>
+                                <tr class="table__body-row table__body-odd">
+                                    <td class="table__body-item table__body-songname">Epona's Song</td>
+                                    <td class="table__body-item table__body-keys">FSAFSA</td>
+                                </tr>
+                                <tr class="table__body-row table__body-even">
+                                    <td class="table__body-item table__body-songname">Zelda's Lullaby</td>
+                                    <td class="table__body-item table__body-keys">SFASFA</td>
+                                </tr>
+                                <tr class="table__body-row table__body-odd">
+                                    <td class="table__body-item table__body-songname">Minuet of Forest</td>
+                                    <td class="table__body-item table__body-keys">DFSASA</td>
+                                </tr>
+                                <tr class="table__body-row table__body-even">
+                                    <td class="table__body-item table__body-songname">Bolero of Fire</td>
+                                    <td class="table__body-item table__body-keys">GDGDAGAG</td>
+                                </tr>
+                                <tr class="table__body-row table__body-odd">
+                                    <td class="table__body-item table__body-songname">Nocturne of Shadow</td>
+                                    <td class="table__body-item table__body-keys">SAADSAG</td>
+                                </tr>
+                                <tr class="table__body-row table__body-even">
+                                    <td class="table__body-item table__body-songname table__body-last-left">Serenade of Water</td>
+                                    <td class="table__body-item table__body-keys table__body-last-right">DGAAS</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <button class="popup__button">Dismiss</button>
+                    </section>
+                </article>
+                <article class="ocarina">
+                    <div class="yellow-container">
+                        <button class="key key__a">A</button>
+                        <button class="key key__s">S</button>
+                        <button class="key key__d">D</button>
+                        <button class="key key__f">F</button>
+                        <button class="key key__g">G</button>
+                    </div>
+                    <img class="ocarina__img" src="static/images/ocarina.png" alt="Ocarina Image" />
+                </article>
+                <article class="bar">
+                    <div class="bar__left">
+                        <div class="bar__left-filling bar-no-error"></div>
+                    </div>
+                    <div class="bar__right">
+                        <div class="bar__right-filling bar-no-error"></div>
+                    </div>
+                </article>
+            </section>
+        </main>
+        <footer class="footer">
+            <section class="footer__content">
+                <ul class="footer__items">
+                    <li class="footer__item">Developed by Ricardo Sanchez</li>
+                    <li class="footer__item">Part of <a class="footer__link"
+                            href="https://www.udemy.com/course/the-complete-web-development-bootcamp/"
+                            target="_blank">The Complete 2022 Web Development Bootcamp</a>
+                    </li>
+                </ul>
+                <ul class="footer__items">
+                    <li class="footer__item">Sound effects from <a class="footer__link"
+                            href="http://noproblo.dayjo.org/ZeldaSounds/" target="_blank">Legend of Zelda Sound
+                            Effects</a></li>
+                    <li class="footer__item">Songs from <a class="footer__link"
+                            href="https://downloads.khinsider.com/game-soundtracks/album/legend-of-zelda-ocarina-of-time-original-sound-track"
+                            target="_blank">Video Game Music</a></li>
+                </ul>
+            </section>
+        </footer>
+    </div>
+    <script src="static/scripts/index.js" charset="utf-8"></script>
+</body>
+
+</html>
