@@ -15,7 +15,6 @@ class SongTracker {
         let onTrack = false;
         let followedSong = null;
         for (const [key, value] of Object.entries(MUSIC_PATTERNS)) {
-            console.log(value + " _ " + this.pattern);
             if (value.substring(0, currentLength) === this.pattern) {
                 followedSong = key;
                 onTrack = true;
@@ -24,7 +23,6 @@ class SongTracker {
         }
 
         if (onTrack) {
-            console.log(followedSong);
             let patternForFollowedSong = MUSIC_PATTERNS[followedSong];
             if (currentLength === patternForFollowedSong.length) {
                 return true;

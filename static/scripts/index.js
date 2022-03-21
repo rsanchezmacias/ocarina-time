@@ -26,7 +26,8 @@ let isSongMenuDisplayed = false;
     }
 
     function playKeySound(key) {
-        if (isAudioEnabled && !areKeysDisabled && !isSongMenuDisplayed) {
+        if (isAudioEnabled && !areKeysDisabled && !isSongMenuDisplayed && VALID_KEYS.includes(key)) {
+            animateKeyPressed(key);
             startFiveSecondTimer(key);
             let audio = new Audio(AUDIO_FILES[key]);
             audio.play();
@@ -181,6 +182,16 @@ let isSongMenuDisplayed = false;
         for (let index = 0; index < keys.length; index++) {
             keys[index].disabled = shouldDisable;
         }
+    }
+
+    function animateKeyPressed(key) {
+        let keyElement = document.querySelector("." + key);
+
+        keyElement.classList.add("key-pressed");
+
+        setTimeout(function() {
+            keyElement.classList.remove("key-pressed");
+        }, 100);
     }
 }
 

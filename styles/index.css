@@ -62,6 +62,10 @@ body {
     cursor: pointer;
 }
 
+.header__action:active {
+    transform: translateY(1px);
+}
+
 .mute-unmute-button {
     background-image: url("../static/images/muted_100.png");
     background-repeat: no-repeat;
@@ -177,12 +181,17 @@ body {
     border-radius: 100%;
     border-style: none;
 
-    opacity: 65%;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.90);
 }
 
 .key:hover {
-    opacity: 100%;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #1FAB89;
+}
+
+.key-pressed {
+    transform: translateY(1px);
     border-style: solid;
     border-width: 2px;
     border-color: #1FAB89;

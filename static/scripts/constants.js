@@ -53,10 +53,12 @@ const SONG_DURATION_IN_SEC = {
     "DGAAS": 20,
 };
 
-let AUDIO_FILES = {
+const AUDIO_FILES = {
     "key__a": "static/notes/OOT_Notes_Ocarina_A_med.wav",
     "key__s": "static/notes/OOT_Notes_Ocarina_B_med.wav",
     "key__d": "static/notes/OOT_Notes_Ocarina_D_med.wav",
     "key__f": "static/notes/OOT_Notes_Ocarina_D2_med.wav",
     "key__g": "static/notes/OOT_Notes_Ocarina_F_med.wav",
 };
+
+const VALID_KEYS = ["key__a", "key__s", "key__d", "key__f", "key__g"];
